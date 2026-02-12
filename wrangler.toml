@@ -1,12 +1,19 @@
-name = "geliya23/newsnow"  # 随便起，Pages 会忽略但 wrangler 需要
-compatibility_date = "2026-02-12"  # 当前日期或最新
-main = "dist/output/server/index.mjs"  # 指向 nitro 生成的 server 入口
+name = "newsnow"  # 改成 Pages 项目实际名（仪表盘看，通常去掉用户名/连字符），或留 "geliya23/newsnow" 也行，wrangler 会 override
+
+compatibility_date = "2026-02-12"  # 可以更新到更新的日期如 2026-06-01，如果有新功能
+
+compatibility_flags = ["nodejs_compat"]  # 核心！必须加这个，解决 Node 内置模块 + better-sqlite3 等错误
+
+main = "dist/output/server/index.mjs"  # nitro server 入口，保持
 
 [assets]
-directory = "dist/output/public"  # 静态资产目录
+directory = "dist/output/public"  # 静态文件，保持
 
-# 如果以后加 D1，再加下面
+# 如果你创建了 D1 数据库，取消注释并填值
 # [[d1_databases]]
 # binding = "DB"
-# database_name = "你的D1数据库名"
-# database_id = "你的UUID"
+# database_name = "newsnow-db"  # 你在仪表盘创建的 D1 名
+# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"  # 从 D1 详情复制 UUID
+
+# 可选：如果想启用更多兼容（新版推荐）
+# compatibility_flags = ["nodejs_compat", "nodejs_compat_v2"]
