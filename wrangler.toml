@@ -1,4 +1,4 @@
-name = "newsnow"  # 改成 Pages 项目实际名（仪表盘看，通常去掉用户名/连字符），或留 "geliya23/newsnow" 也行，wrangler 会 override
+name = "newsnow"  # 改成 Pages 项目实际名（仪表盘看，通常去掉用户名/连字符），或留 "geliya23/newsnow" 也行，wrangler 会有 override
 
 compatibility_date = "2026-02-12"  # 可以更新到更新的日期如 2026-06-01，如果有新功能
 
