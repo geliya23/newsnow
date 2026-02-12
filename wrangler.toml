@@ -1,8 +1,12 @@
-name = "newsnow"
-pages_build_output_dir = "dist/output/public"
-compatibility_date = "2024-10-03"
+name = "newsnow-my"  # 随便起，Pages 会忽略但 wrangler 需要
+compatibility_date = "2026-02-12"  # 当前日期或最新
+main = "dist/output/server/index.mjs"  # 指向 nitro 生成的 server 入口
 
+[assets]
+directory = "dist/output/public"  # 静态资产目录
+
+# 如果以后加 D1，再加下面
 # [[d1_databases]]
-# binding = "NEWSNOW_DB"
-# database_name = "newsnow-db"
-# database_id = ""
+# binding = "DB"
+# database_name = "你的D1数据库名"
+# database_id = "你的UUID"
