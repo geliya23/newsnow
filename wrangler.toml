@@ -1,4 +1,4 @@
-name = "newsnow-my"  # 随便起，Pages 会忽略但 wrangler 需要
+name = "geliya23/newsnow"  # 随便起，Pages 会忽略但 wrangler 需要
 compatibility_date = "2026-02-12"  # 当前日期或最新
 main = "dist/output/server/index.mjs"  # 指向 nitro 生成的 server 入口
 
